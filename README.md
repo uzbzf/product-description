@@ -2,6 +2,9 @@
 
 Веб-приложение на **React + Vite + TypeScript + Tailwind CSS** для генерации SEO-описаний товаров под маркетплейсы через **Google Gemini 3.8 Flash**.
 
+- **GitHub:** https://github.com/uzbzf/product-description
+- **Demo (Vercel):** https://product-description-beta.vercel.app
+
 ## Возможности
 
 - Ввод и хранение Gemini API ключа в `localStorage`
