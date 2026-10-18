@@ -1,0 +1,120 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --bg: #f4f6f8;
+  --bg-elevated: #ffffff;
+  --glass: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(15, 23, 42, 0.08);
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --accent: #0d9488;
+  --accent-soft: rgba(13, 148, 136, 0.12);
+  --danger: #dc2626;
+  --success: #16a34a;
+  --shadow: 0 8px 32px rgba(15, 23, 42, 0.06);
+  --page-glow: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(13, 148, 136, 0.14), transparent);
+}
+
+.dark {
+  --bg: #0b0f14;
+  --bg-elevated: #12181f;
+  --glass: rgba(18, 24, 31, 0.72);
+  --glass-border: rgba(148, 163, 184, 0.12);
+  --text: #e8eef6;
+  --text-muted: #94a3b8;
+  --accent: #2dd4bf;
+  --accent-soft: rgba(45, 212, 191, 0.12);
+  --danger: #f87171;
+  --success: #4ade80;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --page-glow: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(45, 212, 191, 0.1), transparent);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  background-image: var(--page-glow);
+  background-attachment: fixed;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+}
+
+.prose-result {
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.prose-result h1,
+.prose-result h2,
+.prose-result h3 {
+  font-weight: 600;
+  margin: 1.25em 0 0.5em;
+  letter-spacing: -0.02em;
+}
+
+.prose-result h1 {
+  font-size: 1.35rem;
+}
+
+.prose-result h2 {
+  font-size: 1.15rem;
+}
+
+.prose-result h3 {
+  font-size: 1.05rem;
+}
+
+.prose-result p {
+  margin: 0.75em 0;
+  color: var(--text-muted);
+}
+
+.prose-result ul,
+.prose-result ol {
+  margin: 0.75em 0;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+}
+
+.prose-result li {
+  margin: 0.35em 0;
+}
+
+.prose-result strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.prose-result a {
+  color: var(--accent);
+}
